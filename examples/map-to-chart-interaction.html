@@ -190,7 +190,7 @@
       renderer.addValue(selected, new SimpleMarkerSymbol().setColor(new Color([14,105,175, 0.5])));
 
       featureLayer.setRenderer(renderer);
-      featureLayer.refresh();
+      featureLayer.redraw();
 
     } 
 
@@ -316,7 +316,7 @@
       renderer.addValue(selected, new SimpleMarkerSymbol().setColor(new Color([14,105,175, 0.5])));
 
       featureLayer.setRenderer(renderer);
-      featureLayer.refresh();
+      featureLayer.redraw();
 
     } 
 
@@ -358,6 +358,7 @@
   });
 
 </script>
+
   <div class="wrap">
     <p><a href="http://github.com/esridc/cedar/edit/master/site/source/pages/examples/map-to-chart-interaction.hbs">Edit this sample on GitHub</a></p>
   </div>
