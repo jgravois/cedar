@@ -5,11 +5,10 @@
     {"name":"color","type":["string"], "required":true}
   ],
   "template":{
-    "width": 650,
-    "height": 500,
+    "padding": "strict",
     "data": [
       {
-        "name": "iris",
+        "name": "table",
         "format": {
           "property": "features"
         }
@@ -21,8 +20,8 @@
         "nice": true,
         "range": "width",
         "domain": {
-          "data": "iris",
-          "field": "data.attributes.{x.field}"
+          "data": "table",
+          "field": "attributes.{x.field}"
         }
       },
       {
@@ -30,16 +29,16 @@
         "nice": true,
         "range": "height",
         "domain": {
-          "data": "iris",
-          "field": "data.attributes.{y.field}"
+          "data": "table",
+          "field": "attributes.{y.field}"
         }
       },
       {
         "name": "c",
         "type": "ordinal",
         "domain": {
-          "data": "iris",
-          "field": "data.attributes.{color.field}"
+          "data": "table",
+          "field": "attributes.{color.field}"
         },
         "range": [
           "#00ffff", "#7de6ff", "#a8cbff", "#c6adff", "#dd8dff", "#ef63ff", "#ff00ff"
@@ -109,21 +108,21 @@
       {
         "type": "symbol",
         "from": {
-          "data": "iris"
+          "data": "table"
         },
         "properties": {
           "enter": {
             "x": {
               "scale": "x",
-              "field": "data.attributes.{x.field}"
+              "field": "attributes.{x.field}"
             },
             "y": {
               "scale": "y",
-              "field": "data.attributes.{y.field}"
+              "field": "attributes.{y.field}"
             },
             "fill": {
               "scale": "c",
-              "field": "data.attributes.{color.field}"
+              "field": "attributes.{color.field}"
             },
             "fillOpacity": {
               "value": 0.5
